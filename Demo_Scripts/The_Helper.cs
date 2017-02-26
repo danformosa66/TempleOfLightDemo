@@ -101,6 +101,15 @@ public static class The_Helper
         rectTransform.localScale = Vector3.one * scaleMultiplier;
     }
 
+    internal static Color GetRandomColor()
+    {
+        return new Color(
+            Vector2.up.RandomBetween(),
+            Vector2.up.RandomBetween(),
+            Vector2.up.RandomBetween(),
+            Vector2.up.RandomBetween());
+    }
+
     public static Texture2D Crop_FromCenter_X(this Texture2D original, float xPercentile)
     {
         return original.Crop_FromCenter(xPercentile, -1);
